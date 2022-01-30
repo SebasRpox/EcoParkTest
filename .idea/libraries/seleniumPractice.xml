@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="seleniumPractice">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/seleniumPractice.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
