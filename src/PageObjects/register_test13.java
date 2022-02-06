@@ -6,18 +6,18 @@ import org.openqa.selenium.By;
  *
  * @author ecopark
  */
-public class register_test20 {
+public class register_test13 {
     WebDriver driver;
     
-    By name = By.cssSelector("#formulario > div.inputs > input[type=text]:nth-child(2)");
-    By userName = By.cssSelector("#formulario > div.inputs > input[type=text]:nth-child(5)");
-    By password = By.cssSelector("#formulario > div.inputs > input[type=password]:nth-child(8)");
-    By passwordAgain = By.cssSelector("#formulario > div.inputs > input[type=password]:nth-child(11)");
-    By signUp = By.cssSelector("#formulario > div.inputs > input[type=button]:nth-child(14)");
+    By name = By.cssSelector("#formulario > input[type=text]:nth-child(3)");
+    By userName = By.cssSelector("#formulario > input[type=text]:nth-child(6)");
+    By password = By.cssSelector("#formulario > input[type=password]:nth-child(9)");
+    By passwordAgain = By.cssSelector("#formulario > input[type=password]:nth-child(12)");
+    By signUp = By.cssSelector("#formulario > input[type=button]:nth-child(15)");
     By next = By.cssSelector("#crear-cuenta > span");
     By confirm = By.cssSelector("#validar");
     
-    public register_test20(WebDriver driver) {
+    public register_test13(WebDriver driver) {
         this.driver = driver;
     }
     

@@ -1,6 +1,5 @@
 
 package PageObjects;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -8,25 +7,20 @@ import org.openqa.selenium.WebDriver;
  *
  * @author ecopark
  */
-public class conectionerror_test8 {
+public class viewecopark_test7 {
     WebDriver driver;
     
-    By name = By.cssSelector("#formulario > div.inputs > input[type=text]:nth-child(2)");
-    By userName = By.cssSelector("#formulario > div.inputs > input[type=text]:nth-child(5)");
-    By password = By.cssSelector("#formulario > div.inputs > input[type=password]:nth-child(8)");
-    By passwordAgain = By.cssSelector("#formulario > div.inputs > input[type=password]:nth-child(11)");
-    By signIn = By.cssSelector("#formulario > div.inputs > input[type=submit]:nth-child(13)");
-    By confirm = By.cssSelector("#title-ecopark");
-    By ecopark = By.cssSelector("body > div:nth-child(4) > form > input[type=submit]:nth-child(1)");
-    By msg = By.cssSelector("body > h1");
+    By name = By.cssSelector("#formulario > input[type=text]:nth-child(2)");
+    By userName = By.cssSelector("#formulario > input[type=text]:nth-child(5)");
+    By password = By.cssSelector("#formulario > input[type=password]:nth-child(8)");
+    By passwordAgain = By.cssSelector("#formulario > input[type=password]:nth-child(11)");
+    By signIn = By.cssSelector("#formulario > input[type=submit]:nth-child(13)");
+    By ecoparks = By.cssSelector("body > header > nav > form > input[type=submit]:nth-child(1)");
+    By msgConfirm = By.cssSelector("body > section > section > section > div > div > h5");
 
     
-    public conectionerror_test8(WebDriver driver) {
+    public viewecopark_test7(WebDriver driver) {
         this.driver = driver;
-    }
-    
-    public String getValueConfirmation(){
-        return driver.findElement(msg).getText();
     }
     
     public void setName(String strName){
@@ -49,8 +43,12 @@ public class conectionerror_test8 {
         driver.findElement(signIn).click();
     }
     
-    public void clickEcopark(){
-        driver.findElement(ecopark).click();
+    public void clickNext(){
+        driver.findElement(ecoparks).click();
+    }
+    
+    public String getValueConfirmation(){
+        return driver.findElement(msgConfirm).getText();
     }
     
     public void loginApplication(String name, String userName, String password){
@@ -60,6 +58,6 @@ public class conectionerror_test8 {
         this.setPassword(password);
         this.setPasswordAgain(password);
         this.clickLogin();
-        this.clickEcopark();
+        this.clickNext();
     }
 }

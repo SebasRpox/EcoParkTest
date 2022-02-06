@@ -1,4 +1,3 @@
-
 package PPI_Test;
 
 import org.junit.After;
@@ -13,18 +12,16 @@ import org.openqa.selenium.WebElement;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import PageObjects.conectionerror_test8;
 
-/**
- *
- * @author ecopark
- */
-public class Test8 {
+import PageObjects.register_test13;
+
+public class Test13 {
+
     private static WebDriver driver = null;
-    conectionerror_test8 timeup;
+    register_test13 signup;
    
 
-    public Test8() {
+    public Test13() {
     }
 
     @BeforeClass
@@ -53,16 +50,16 @@ public class Test8 {
      */
     @Test
     public void testMain() throws InterruptedException {
-        String userName = "admin10";
-        String password = "wilmer123";
-        String name = "admin10";
+
+        String userName = "userecol";
+        String password = "colombiambiental";
+        String name = "usercol";
         
         //Test 20
-        timeup = new conectionerror_test8(driver);
-        timeup.loginApplication(name, userName, password);
-
-        Thread.sleep(5000);
-        assertEquals("validate test 8", "HTTP Status 500 – Internal Server Error", timeup.getValueConfirmation());
+        signup = new register_test13(driver);
+        Thread.sleep(2000);
+        signup.loginApplication(name, userName, password);
+        assertEquals("validate test 20", "Cuenta creada exitosamente.", signup.getValueConfirmation());
 
     }
 }

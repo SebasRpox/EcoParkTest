@@ -12,17 +12,17 @@ import org.openqa.selenium.By;
  *
  * @author ecopark
  */
-public class login_test21 {
+public class login_test14 {
     WebDriver driver;
     
-    By name = By.cssSelector("#formulario > div.inputs > input[type=text]:nth-child(2)");
-    By userName = By.cssSelector("#formulario > div.inputs > input[type=text]:nth-child(5)");
-    By password = By.cssSelector("#formulario > div.inputs > input[type=password]:nth-child(8)");
-    By passwordAgain = By.cssSelector("#formulario > div.inputs > input[type=password]:nth-child(11)");
-    By signIn = By.cssSelector("#formulario > div.inputs > input[type=submit]:nth-child(13)");
-    By confirm = By.cssSelector("#title-ecopark");
+    By name = By.cssSelector("#formulario > input[type=text]:nth-child(2)");
+    By userName = By.cssSelector("#formulario > input[type=text]:nth-child(5)");
+    By password = By.cssSelector("#formulario > input[type=password]:nth-child(8)");
+    By passwordAgain = By.cssSelector("#formulario > input[type=password]:nth-child(11)");
+    By signIn = By.cssSelector("#formulario > input[type=submit]:nth-child(13)");
+    By confirm = By.cssSelector("body > header > section > h1");
     
-    public login_test21(WebDriver driver) {
+    public login_test14(WebDriver driver) {
         this.driver = driver;
     }
     

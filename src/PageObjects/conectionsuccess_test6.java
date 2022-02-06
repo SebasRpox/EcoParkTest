@@ -10,11 +10,12 @@ import org.openqa.selenium.WebDriver;
 public class conectionsuccess_test6 {
     WebDriver driver;
     
-    By name = By.cssSelector("#formulario > div.inputs > input[type=text]:nth-child(2)");
-    By userName = By.cssSelector("#formulario > div.inputs > input[type=text]:nth-child(5)");
-    By password = By.cssSelector("#formulario > div.inputs > input[type=password]:nth-child(8)");
-    By passwordAgain = By.cssSelector("#formulario > div.inputs > input[type=password]:nth-child(11)");
-    By signIn = By.cssSelector("#formulario > div.inputs > input[type=submit]:nth-child(13)");
+    By name = By.cssSelector("#formulario > input[type=text]:nth-child(2)");
+    By userName = By.cssSelector("#formulario > input[type=text]:nth-child(5)");
+    By password = By.cssSelector("#formulario > input[type=password]:nth-child(8)");
+    By passwordAgain = By.cssSelector("#formulario > input[type=password]:nth-child(11)");
+    By signIn = By.cssSelector("#formulario > input[type=submit]:nth-child(13)");
+    By connectsuccess = By.id("conexion");
 
     
     public conectionsuccess_test6(WebDriver driver) {
@@ -39,6 +40,10 @@ public class conectionsuccess_test6 {
     
     public void clickLogin(){
         driver.findElement(signIn).click();
+    }
+    
+    public String getValueConfirmation(){
+        return driver.findElement(connectsuccess).getText();
     }
     
     public void loginApplication(String name, String userName, String password){

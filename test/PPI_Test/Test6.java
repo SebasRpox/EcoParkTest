@@ -12,6 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import PageObjects.conectionsuccess_test6;
 import java.util.Date;
 import java.util.List;
+import static org.junit.Assert.assertEquals;
 import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
@@ -63,12 +64,12 @@ public class Test6 {
         String password = "wilmer123";
         String name = "admin10";
         
-        //Test 20
+        //Test 6
         success = new conectionsuccess_test6(driver);
         success.loginApplication(name, userName, password);
 
-        //Thread.sleep(5000);
-        //assertEquals("validate test 8", "HTTP Status 500 – Internal Server Error", success.getValueConfirmation());
+        Thread.sleep(2000);
+        assertEquals("validate test 8", "Conexión exitosa", success.getValueConfirmation());
 
     }
 }
